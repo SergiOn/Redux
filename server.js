@@ -1,5 +1,5 @@
 const static = require('node-static');
-const file = new static.Server('./index.html');
+const file = new static.Server('./');
 
 require('http').createServer(function (request, response) {
     if (!/\./.test(request.url)) {

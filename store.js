@@ -1,8 +1,10 @@
-export default class Store {
+class Store {
     constructor(updateState, state) {
         this._updateState = updateState;
         this._state = state;
         this._callbacks = [];
+
+        console.log('store');
     }
 
     get state() {

@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Redux</title>
+    <script src="/node_modules/react/dist/react.js" defer></script>
+    <script src="/node_modules/react-dom/dist/react-dom.js" defer></script>
+    <script src="/store.js" defer></script>
+    <script src="/app.jsx" defer></script>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #7749bd;
+            text-align: center;
+        }
+        .root {
+            margin: auto;
+        }
+        .count {
+            font-size: 7em;
+            color: #fff;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .decrement,
+        .reset,
+        .increment {
+            font-size: 2.4em;
+            width: 110px;
+            border: none;
+            background-color: #7749bd;
+            outline-color: #7749bd;
+            color: #fff;
+        }
+        .reset,
+        .increment {
+            margin-left: 10px;
+        }
+
+    </style>
 </head>
 <body>
 
     <h1>Hello Redux</h1>
+
+    <section id="root" class="root">
+        <span class="count">0</span>
+        <div class="buttons">
+            <button class="decrement">-</button>
+            <button class="reset">R</button>
+            <button class="increment">+</button>
+        </div>
+    </section>
+
+
 
 </body>
 </html>
