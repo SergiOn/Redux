@@ -6,3 +6,12 @@
 <h3>#2 Actions</h3>
 <h3>#3 Store</h3>
 <h3>#4 Subscription</h3>
+<h3>#5 State</h3>
+<p>Object.assign example:</p>
+<pre>
+function update(state, value) {
+    return Object.assign({}, state, {
+        count: state.count + value;
+    });
+}
+</pre>
