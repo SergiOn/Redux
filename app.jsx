@@ -13,7 +13,7 @@ const incrementAction = { type: 'INCREMENT', amount: 1 };
 const decrementAction = { type: 'DECREMENT', amount: 1 };
 const resetAction = { type: 'RESET' };
 
-const store = createStore(reducer, initialState);
+const store = Redux.createStore(reducer, initialState);
 
 class Counter extends React.Component {
     constructor(props) {

@@ -1,11 +1,12 @@
 {
-  "name": "redux",
+  "name": "my_redux",
   "version": "1.0.0",
   "description": "redux screencast",
   "main": "index.js",
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "node-static": "^0.7.9"
