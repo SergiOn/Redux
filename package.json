@@ -1,0 +1,27 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "description": "redux screencast",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.9"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergiOn/Redux.git"
+  },
+  "author": "SergiOn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergiOn/Redux/issues"
+  },
+  "homepage": "https://github.com/SergiOn/Redux#readme"
+}
