@@ -3,8 +3,6 @@ class Store {
         this._updateState = updateState;
         this._state = state;
         this._callbacks = [];
-
-        console.log('store');
     }
 
     get state() {
