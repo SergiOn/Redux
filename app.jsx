@@ -6,6 +6,7 @@ class Counter extends React.Component {
 
         this.increment = this.increment.bind(this);
         this.decrement = this.decrement.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
     increment() {
@@ -16,13 +17,17 @@ class Counter extends React.Component {
         this.setState({ count: this.state.count - 1 });
     }
 
+    reset() {
+        this.setState({ count: 0 });
+    }
+
     render() {
         return (
             <div className="counter">
                 <span className="count">{this.state.count}</span>
                 <div className="buttons">
                     <button className="decrement" onClick={this.decrement}>-</button>
-                    <button className="reset">R</button>
+                    <button className="reset" onClick={this.reset}>R</button>
                     <button className="increment" onClick={this.increment}>+</button>
                 </div>
             </div>
