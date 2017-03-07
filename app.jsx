@@ -9,9 +9,15 @@ function reducer(state = { count: 0 }, action) {
     }
 }
 
-const incrementAction = { type: 'INCREMENT', amount: 1 };
-const decrementAction = { type: 'DECREMENT', amount: 1 };
-const resetAction = { type: 'RESET' };
+function incrementAction(amount) {
+    return { type: 'INCREMENT', amount };
+}
+function decrementAction(amount) {
+    return { type: 'DECREMENT', amount };
+}
+function resetAction() {
+    return { type: 'RESET' };
+}
 
 const store = Redux.createStore(reducer, initialState);
 
@@ -29,15 +35,17 @@ class Counter extends React.Component {
     }
 
     increment() {
-        store.dispatch(incrementAction);
+        let amount = parseInt(this.refs.amount.value) || 1;
+        store.dispatch(incrementAction(amount));
     }
 
     decrement() {
-        store.dispatch(decrementAction);
+        let amount = parseInt(this.refs.amount.value) || 1;
+        store.dispatch(decrementAction(amount));
     }
 
     reset() {
-        store.dispatch(resetAction);
+        store.dispatch(resetAction());
     }
 
     render() {
@@ -51,6 +59,7 @@ class Counter extends React.Component {
                     <button className="reset" onClick={this.reset}>R</button>
                     <button className="increment" onClick={this.increment}>+</button>
                 </div>
+                <input className="value" type="text" ref="amount" defaultValue="1"/>
             </div>
         );
     }
